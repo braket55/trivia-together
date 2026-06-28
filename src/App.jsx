@@ -4,23 +4,31 @@ import { PlayScreen } from "./components/PlayScreen.jsx";
 import { StatsScreen } from "./components/StatsScreen.jsx";
 import { SessionSummary } from "./components/SessionSummary.jsx";
 import { ConfirmEndModal } from "./components/ConfirmEndModal.jsx";
-import { getCategoriesFromQuestions, loadQuestionBank } from "./lib/questions.js";
+import {
+  filterQuestionsByCategories,
+  getCategoriesFromQuestions,
+  loadQuestionBank,
+  shuffleQuestions,
+} from "./lib/questions.js";
+import { createEmptySession } from "./lib/game.js";
 import "./index.css";
 
 const questionBank = loadQuestionBank();
 
 function App() {
-  const [screen, setScreen] = useState("home");
-  const [selectedCategories, setSelectedCategories] = useState(
-    () => new Set(getCategoriesFromQuestions(questionBank))
-  );
-  const [questionMode, setQuestionMode] = useState("unseen");
-  const [showEndModal, setShowEndModal] = useState(false);
-
   const availableCategories = useMemo(
     () => getCategoriesFromQuestions(questionBank),
     []
   );
+
+  const [screen, setScreen] = useState("home");
+  const [selectedCategories, setSelectedCategories] = useState(
+    () => new Set(availableCategories)
+  );
+  const [questionMode, setQuestionMode] = useState("unseen");
+  const [showEndModal, setShowEndModal] = useState(false);
+  const [session, setSession] = useState(null);
+  const [startMessage, setStartMessage] = useState("");
 
   const allSelected = selectedCategories.size === availableCategories.length;
 
@@ -40,12 +48,33 @@ function App() {
 
   function startSession() {
     if (selectedCategories.size === 0) return;
+
+    const filteredQuestions = filterQuestionsByCategories(
+      questionBank,
+      selectedCategories
+    );
+
+    if (filteredQuestions.length === 0) {
+      setStartMessage("No questions are available for those categories.");
+      return;
+    }
+
+    const shuffledQuestions = shuffleQuestions(filteredQuestions);
+    setSession(createEmptySession(shuffledQuestions));
+    setStartMessage("");
     setScreen("play");
   }
 
-  function confirmEndSession() {
+  function endSession(reason = "ended-by-player") {
     setShowEndModal(false);
+    setSession((current) =>
+      current ? { ...current, summaryReason: reason } : current
+    );
     setScreen("summary");
+  }
+
+  function playAgain() {
+    startSession();
   }
 
   return (
@@ -57,6 +86,7 @@ function App() {
           allSelected={allSelected}
           questionMode={questionMode}
           questionCount={questionBank.length}
+          startMessage={startMessage}
           onToggleCategory={toggleCategory}
           onToggleAll={toggleAllCategories}
           onChangeQuestionMode={setQuestionMode}
@@ -65,10 +95,12 @@ function App() {
         />
       )}
 
-      {screen === "play" && (
+      {screen === "play" && session && (
         <PlayScreen
-          questionCount={questionBank.length}
+          session={session}
+          setSession={setSession}
           onRequestEnd={() => setShowEndModal(true)}
+          onCompleteQuestionPool={() => endSession("completed-question-pool")}
         />
       )}
 
@@ -76,7 +108,8 @@ function App() {
 
       {screen === "summary" && (
         <SessionSummary
-          onPlayAgain={() => setScreen("play")}
+          session={session}
+          onPlayAgain={playAgain}
           onHome={() => setScreen("home")}
         />
       )}
@@ -84,7 +117,7 @@ function App() {
       {showEndModal && (
         <ConfirmEndModal
           onResume={() => setShowEndModal(false)}
-          onEnd={confirmEndSession}
+          onEnd={() => endSession("ended-by-player")}
         />
       )}
     </div>

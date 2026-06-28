@@ -6,6 +6,7 @@ export function HomeScreen({
   allSelected,
   questionMode,
   questionCount,
+  startMessage,
   onToggleCategory,
   onToggleAll,
   onChangeQuestionMode,
@@ -56,6 +57,8 @@ export function HomeScreen({
                 selectedCount === 1 ? "category" : "categories"
               } selected • ${questionCount} starter questions loaded.`}
         </p>
+
+        {startMessage && <p className="notice-text">{startMessage}</p>}
       </section>
 
       <section className="panel">
@@ -76,6 +79,10 @@ export function HomeScreen({
             Include Seen
           </button>
         </div>
+
+        <p className="helper-text">
+          Seen-question filtering will be connected when IndexedDB is added.
+        </p>
       </section>
 
       <div className="home-actions">

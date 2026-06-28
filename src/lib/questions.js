@@ -42,3 +42,21 @@ export function getCategoriesFromQuestions(questions) {
 export function getCategoryIcon(category) {
   return CATEGORY_ICONS[category] ?? FALLBACK_CATEGORY_ICON;
 }
+
+export function filterQuestionsByCategories(questions, selectedCategories) {
+  return questions.filter((question) => selectedCategories.has(question.category));
+}
+
+export function shuffleQuestions(questions) {
+  const shuffled = [...questions];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [
+      shuffled[randomIndex],
+      shuffled[index],
+    ];
+  }
+
+  return shuffled;
+}
