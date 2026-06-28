@@ -3,10 +3,113 @@
     "id": "disney-0001",
     "category": "Disney",
     "difficulty": "easy",
-    "question": "What Disney movie features the song Let It Go?",
-    "answer": "Frozen",
-    "acceptableAnswers": ["Frozen"],
-    "explanation": "Let It Go is performed by Elsa in Frozen.",
-    "tags": ["movies", "songs"]
+    "source": "Trivia Together Core Pack",
+    "question": "What is the name of Simba's father in The Lion King?",
+    "answer": "Mufasa",
+    "acceptableAnswers": ["Mufasa"],
+    "explanation": "Mufasa is the wise king of the Pride Lands and Simba's father.",
+    "tags": ["lion king", "characters"]
+  },
+  {
+    "id": "disney-0002",
+    "category": "Disney",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "Which princess loses a glass slipper at the royal ball?",
+    "answer": "Cinderella",
+    "acceptableAnswers": ["Cinderella"],
+    "explanation": "Cinderella's glass slipper becomes the clue that leads the prince back to her.",
+    "tags": ["princesses", "classic"]
+  },
+  {
+    "id": "disney-0003",
+    "category": "Disney",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "What kind of animal is Dumbo?",
+    "answer": "Elephant",
+    "acceptableAnswers": ["Elephant", "An elephant"],
+    "explanation": "Dumbo is a young elephant famous for his oversized ears.",
+    "tags": ["classic", "animals"]
+  },
+  {
+    "id": "disney-0004",
+    "category": "Disney",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "In Frozen, what is the name of Elsa's younger sister?",
+    "answer": "Anna",
+    "acceptableAnswers": ["Anna"],
+    "explanation": "Anna's determination to reconnect with Elsa is at the heart of Frozen.",
+    "tags": ["frozen", "princesses"]
+  },
+  {
+    "id": "disney-0005",
+    "category": "Disney",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "What toy says 'To infinity... and beyond!'?",
+    "answer": "Buzz Lightyear",
+    "acceptableAnswers": ["Buzz", "Buzz Lightyear"],
+    "explanation": "Buzz Lightyear is the space ranger from Pixar's Toy Story.",
+    "tags": ["pixar", "toy story"]
+  },
+  {
+    "id": "disney-0006",
+    "category": "Disney",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "What is the name of the kingdom where Elsa and Anna live?",
+    "answer": "Arendelle",
+    "acceptableAnswers": ["Arendelle"],
+    "explanation": "Arendelle is the fictional Scandinavian-inspired kingdom in Frozen.",
+    "tags": ["frozen", "locations"]
+  },
+  {
+    "id": "disney-0007",
+    "category": "Disney",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "Which Disney princess has a pet tiger named Rajah?",
+    "answer": "Jasmine",
+    "acceptableAnswers": ["Jasmine", "Princess Jasmine"],
+    "explanation": "Rajah is Jasmine's loyal tiger companion in Aladdin.",
+    "tags": ["princesses", "aladdin"]
+  },
+  {
+    "id": "disney-0008",
+    "category": "Disney",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "In Finding Nemo, what kind of fish is Dory?",
+    "answer": "Blue tang",
+    "acceptableAnswers": ["Blue tang", "Blue tang fish", "Regal blue tang"],
+    "explanation": "Dory is a regal blue tang, a brightly colored reef fish.",
+    "tags": ["pixar", "finding nemo"]
+  },
+  {
+    "id": "disney-0009",
+    "category": "Disney",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "Which Disney Park opened first?",
+    "answer": "Disneyland",
+    "acceptableAnswers": ["Disneyland", "Disneyland Park"],
+    "explanation": "Disneyland in Anaheim, California, opened on July 17, 1955, and was the only Disney park Walt Disney personally oversaw.",
+    "tags": ["parks", "history"]
+  },
+  {
+    "id": "disney-0010",
+    "category": "Disney",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "What are the names of Cinderella's two stepsisters?",
+    "answer": "Anastasia and Drizella",
+    "acceptableAnswers": [
+      "Anastasia and Drizella",
+      "Drizella and Anastasia"
+    ],
+    "explanation": "Anastasia and Drizella are Cinderella's spoiled and often comical stepsisters.",
+    "tags": ["cinderella", "characters"]
   }
 ]
