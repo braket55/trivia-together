@@ -14,7 +14,6 @@ const QUESTION_PACKS = [
   moviesQuestions,
   booksQuestions,
   historyQuestions,
-  generalQuestions,
 ];
 
 export const CATEGORY_ICONS = {
