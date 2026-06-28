@@ -441,3 +441,82 @@ h2 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+.turn-panel {
+  margin-top: 22px;
+  padding: 22px;
+  border-radius: 24px;
+  text-align: center;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.turn-panel p {
+  margin-bottom: 18px;
+  color: #e2e8f0;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.player-badge {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.player-badge span {
+  font-size: 2.3rem;
+}
+
+.player-badge strong {
+  font-size: clamp(2.2rem, 11vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.husband-theme {
+  border: 1px solid rgba(168, 85, 247, 0.55);
+  background: linear-gradient(
+    135deg,
+    rgba(126, 34, 206, 0.36),
+    rgba(30, 41, 59, 0.88)
+  );
+}
+
+.wife-theme {
+  border: 1px solid rgba(34, 211, 238, 0.55);
+  background: linear-gradient(
+    135deg,
+    rgba(8, 145, 178, 0.34),
+    rgba(30, 41, 59, 0.88)
+  );
+}
+
+.husband-buzz {
+  border-color: rgba(168, 85, 247, 0.55);
+  background: linear-gradient(
+    135deg,
+    rgba(126, 34, 206, 0.38),
+    rgba(30, 41, 59, 0.96)
+  );
+}
+
+.wife-buzz {
+  border-color: rgba(34, 211, 238, 0.55);
+  background: linear-gradient(
+    135deg,
+    rgba(8, 145, 178, 0.36),
+    rgba(30, 41, 59, 0.96)
+  );
+}
+
+.judge-button.husband-choice {
+  background: #7e22ce;
+}
+
+.judge-button.wife-choice {
+  background: #0891b2;
+}

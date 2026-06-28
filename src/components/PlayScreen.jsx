@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { applyJudgement, getCurrentQuestion } from "../lib/game.js";
-import { getPlayerLabel } from "../lib/players.js";
+import {
+  getPlayerEmoji,
+  getPlayerLabel,
+  getPlayerThemeClass,
+} from "../lib/players.js";
 
 export function PlayScreen({
   session,
@@ -80,13 +84,16 @@ export function PlayScreen({
         {!buzzedPlayer && <p>Tap Husband or Wife to buzz in first.</p>}
 
         {buzzedPlayer && !answerRevealed && (
-          <section className="answer-panel">
-            <p className="eyebrow">Buzzed in</p>
-            <h3>{getPlayerLabel(buzzedPlayer)} buzzed first.</h3>
-            <p>
-              Say your answer out loud. The other player may agree or give a
-              different answer.
-            </p>
+          <section
+            className={`turn-panel ${getPlayerThemeClass(buzzedPlayer)}`}
+          >
+            <div className="player-badge">
+              <span>{getPlayerEmoji(buzzedPlayer)}</span>
+              <strong>{getPlayerLabel(buzzedPlayer)}</strong>
+            </div>
+
+            <p>Your turn.</p>
+
             <button
               className="primary-button"
               onClick={() => setAnswerRevealed(true)}
@@ -116,17 +123,17 @@ export function PlayScreen({
 
             <div className="judge-grid">
               <button
-                className="judge-button correct"
+                className="judge-button husband-choice"
                 onClick={() => handleJudgement("player1")}
               >
-                Husband Correct
+                🟣 Husband Correct
               </button>
 
               <button
-                className="judge-button correct"
+                className="judge-button wife-choice"
                 onClick={() => handleJudgement("player2")}
               >
-                Wife Correct
+                🩵 Wife Correct
               </button>
 
               <button
@@ -142,29 +149,29 @@ export function PlayScreen({
 
       <section className="buzz-grid">
         <button
-          className="buzz-button"
+          className="buzz-button husband-buzz"
           disabled={Boolean(buzzedPlayer)}
           onClick={() => handleBuzz("player1")}
         >
-          Husband
+          🐭 Husband
         </button>
 
         <button
-          className="buzz-button"
+          className="buzz-button wife-buzz"
           disabled={Boolean(buzzedPlayer)}
           onClick={() => handleBuzz("player2")}
         >
-          Wife
+          🦊 Wife
         </button>
       </section>
 
       <section className="mini-score-card">
         <div>
-          <span>Husband</span>
+          <span>🐭 Husband</span>
           <strong>{session.player1Score}</strong>
         </div>
         <div>
-          <span>Wife</span>
+          <span>🦊 Wife</span>
           <strong>{session.player2Score}</strong>
         </div>
         <div>
