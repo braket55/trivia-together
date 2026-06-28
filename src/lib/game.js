@@ -73,7 +73,7 @@ export function getAccuracy(correct, answeredCount) {
 }
 
 export function getWinner(session) {
-  if (session.player1Score > session.player2Score) return "Player 1 wins!";
-  if (session.player2Score > session.player1Score) return "Player 2 wins!";
+  if (session.player1Score > session.player2Score) return "Husband wins!";
+  if (session.player2Score > session.player1Score) return "Wife wins!";
   return "It’s a tie!";
 }

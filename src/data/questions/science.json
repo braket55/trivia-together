@@ -3,10 +3,110 @@
     "id": "science-0001",
     "category": "Science",
     "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
     "question": "What planet is known as the Red Planet?",
     "answer": "Mars",
     "acceptableAnswers": ["Mars", "The planet Mars"],
-    "explanation": "Mars is called the Red Planet because iron oxide on its surface gives it a reddish color.",
-    "tags": ["space", "planets"]
+    "explanation": "Mars appears red because iron oxide, or rust, covers much of its surface.",
+    "tags": ["astronomy", "planets"]
+  },
+  {
+    "id": "science-0002",
+    "category": "Science",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "What is the largest planet in our solar system?",
+    "answer": "Jupiter",
+    "acceptableAnswers": ["Jupiter"],
+    "explanation": "Jupiter is the largest planet in our solar system by both mass and diameter.",
+    "tags": ["astronomy", "planets"]
+  },
+  {
+    "id": "science-0003",
+    "category": "Science",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "What gas do plants absorb from the atmosphere during photosynthesis?",
+    "answer": "Carbon dioxide",
+    "acceptableAnswers": ["Carbon dioxide", "CO2"],
+    "explanation": "Plants use carbon dioxide, water, and sunlight to produce sugars through photosynthesis.",
+    "tags": ["biology", "plants"]
+  },
+  {
+    "id": "science-0004",
+    "category": "Science",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "What is the chemical symbol for gold?",
+    "answer": "Au",
+    "acceptableAnswers": ["Au"],
+    "explanation": "The symbol Au comes from the Latin word 'aurum,' meaning gold.",
+    "tags": ["chemistry", "elements"]
+  },
+  {
+    "id": "science-0005",
+    "category": "Science",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "What force keeps the planets in orbit around the Sun?",
+    "answer": "Gravity",
+    "acceptableAnswers": ["Gravity", "Gravitational force"],
+    "explanation": "Gravity is the attractive force that keeps planets, moons, and other objects in orbit.",
+    "tags": ["physics", "astronomy"]
+  },
+  {
+    "id": "science-0006",
+    "category": "Science",
+    "difficulty": "easy",
+    "source": "Trivia Together Core Pack",
+    "question": "How many bones does an adult human typically have?",
+    "answer": "206",
+    "acceptableAnswers": ["206", "Two hundred six"],
+    "explanation": "Most healthy adults have 206 bones, although small anatomical variations can occur.",
+    "tags": ["human body", "anatomy"]
+  },
+  {
+    "id": "science-0007",
+    "category": "Science",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "What is the hardest naturally occurring substance on Earth?",
+    "answer": "Diamond",
+    "acceptableAnswers": ["Diamond"],
+    "explanation": "Diamond ranks highest on the Mohs hardness scale among naturally occurring materials.",
+    "tags": ["geology", "minerals"]
+  },
+  {
+    "id": "science-0008",
+    "category": "Science",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "Which blood type is known as the universal donor for red blood cell transfusions?",
+    "answer": "O negative",
+    "acceptableAnswers": ["O negative", "O-", "Type O negative"],
+    "explanation": "O negative blood lacks the A, B, and Rh antigens, making it compatible with the widest range of recipients in emergencies.",
+    "tags": ["medicine", "human body"]
+  },
+  {
+    "id": "science-0009",
+    "category": "Science",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "What is the closest star to Earth other than the Sun?",
+    "answer": "Proxima Centauri",
+    "acceptableAnswers": ["Proxima Centauri"],
+    "explanation": "Proxima Centauri is the nearest known star beyond our own Sun, about 4.24 light-years away.",
+    "tags": ["astronomy", "stars"]
+  },
+  {
+    "id": "science-0010",
+    "category": "Science",
+    "difficulty": "medium",
+    "source": "Trivia Together Core Pack",
+    "question": "What part of the cell contains most of its genetic material?",
+    "answer": "The nucleus",
+    "acceptableAnswers": ["Nucleus", "The nucleus"],
+    "explanation": "In most plant and animal cells, the nucleus houses the cell's DNA.",
+    "tags": ["biology", "cells"]
   }
 ]

@@ -17,8 +17,8 @@ export function SessionSummary({ session, onPlayAgain, onHome }) {
     );
   }
 
-  const player1Accuracy = getAccuracy(session.player1Score, session.answeredCount);
-  const player2Accuracy = getAccuracy(session.player2Score, session.answeredCount);
+  const husbandAccuracy = getAccuracy(session.player1Score, session.answeredCount);
+  const wifeAccuracy = getAccuracy(session.player2Score, session.answeredCount);
 
   return (
     <main className="screen">
@@ -37,18 +37,18 @@ export function SessionSummary({ session, onPlayAgain, onHome }) {
       </section>
 
       <section className="panel summary-grid">
-        <SummaryStat label="Player 1 Score" value={session.player1Score} />
-        <SummaryStat label="Player 2 Score" value={session.player2Score} />
+        <SummaryStat label="Husband Score" value={session.player1Score} />
+        <SummaryStat label="Wife Score" value={session.player2Score} />
         <SummaryStat label="Questions Played" value={session.answeredCount} />
-        <SummaryStat label="Player 1 Buzzes" value={session.player1Buzzes} />
-        <SummaryStat label="Player 2 Buzzes" value={session.player2Buzzes} />
+        <SummaryStat label="Husband Buzzes" value={session.player1Buzzes} />
+        <SummaryStat label="Wife Buzzes" value={session.player2Buzzes} />
         <SummaryStat label="Neither Correct" value={session.neitherCorrect} />
-        <SummaryStat label="Player 1 Buzz Wins" value={session.player1BuzzWins} />
-        <SummaryStat label="Player 2 Buzz Wins" value={session.player2BuzzWins} />
-        <SummaryStat label="Player 1 Steals" value={session.player1Steals} />
-        <SummaryStat label="Player 2 Steals" value={session.player2Steals} />
-        <SummaryStat label="Player 1 Accuracy" value={`${player1Accuracy}%`} />
-        <SummaryStat label="Player 2 Accuracy" value={`${player2Accuracy}%`} />
+        <SummaryStat label="Husband Buzz Wins" value={session.player1BuzzWins} />
+        <SummaryStat label="Wife Buzz Wins" value={session.player2BuzzWins} />
+        <SummaryStat label="Husband Steals" value={session.player1Steals} />
+        <SummaryStat label="Wife Steals" value={session.player2Steals} />
+        <SummaryStat label="Husband Accuracy" value={`${husbandAccuracy}%`} />
+        <SummaryStat label="Wife Accuracy" value={`${wifeAccuracy}%`} />
       </section>
 
       <div className="home-actions">

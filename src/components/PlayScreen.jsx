@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { applyJudgement, getCurrentQuestion } from "../lib/game.js";
+import { getPlayerLabel } from "../lib/players.js";
 
 export function PlayScreen({
   session,
@@ -76,14 +77,12 @@ export function PlayScreen({
 
         <h2>{currentQuestion.question}</h2>
 
-        {!buzzedPlayer && (
-          <p>Tap Player 1 or Player 2 to buzz in first.</p>
-        )}
+        {!buzzedPlayer && <p>Tap Husband or Wife to buzz in first.</p>}
 
         {buzzedPlayer && !answerRevealed && (
           <section className="answer-panel">
             <p className="eyebrow">Buzzed in</p>
-            <h3>{buzzedPlayer === "player1" ? "Player 1" : "Player 2"} buzzed first.</h3>
+            <h3>{getPlayerLabel(buzzedPlayer)} buzzed first.</h3>
             <p>
               Say your answer out loud. The other player may agree or give a
               different answer.
@@ -120,14 +119,14 @@ export function PlayScreen({
                 className="judge-button correct"
                 onClick={() => handleJudgement("player1")}
               >
-                Player 1 Correct
+                Husband Correct
               </button>
 
               <button
                 className="judge-button correct"
                 onClick={() => handleJudgement("player2")}
               >
-                Player 2 Correct
+                Wife Correct
               </button>
 
               <button
@@ -147,7 +146,7 @@ export function PlayScreen({
           disabled={Boolean(buzzedPlayer)}
           onClick={() => handleBuzz("player1")}
         >
-          Player 1
+          Husband
         </button>
 
         <button
@@ -155,17 +154,17 @@ export function PlayScreen({
           disabled={Boolean(buzzedPlayer)}
           onClick={() => handleBuzz("player2")}
         >
-          Player 2
+          Wife
         </button>
       </section>
 
       <section className="mini-score-card">
         <div>
-          <span>Player 1</span>
+          <span>Husband</span>
           <strong>{session.player1Score}</strong>
         </div>
         <div>
-          <span>Player 2</span>
+          <span>Wife</span>
           <strong>{session.player2Score}</strong>
         </div>
         <div>

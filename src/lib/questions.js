@@ -5,7 +5,6 @@ import geographyQuestions from "../data/questions/geography.json";
 import moviesQuestions from "../data/questions/movies.json";
 import booksQuestions from "../data/questions/books.json";
 import historyQuestions from "../data/questions/history.json";
-import generalQuestions from "../data/questions/general.json";
 
 const QUESTION_PACKS = [
   scienceQuestions,
