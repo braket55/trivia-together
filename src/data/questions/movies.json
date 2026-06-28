@@ -1,0 +1,12 @@
+[
+  {
+    "id": "movies-0001",
+    "category": "Movies",
+    "difficulty": "easy",
+    "question": "What movie features a character named Darth Vader?",
+    "answer": "Star Wars",
+    "acceptableAnswers": ["Star Wars", "A New Hope", "The Star Wars movies"],
+    "explanation": "Darth Vader is one of the central characters in the Star Wars franchise.",
+    "tags": ["sci-fi"]
+  }
+]

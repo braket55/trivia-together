@@ -1,0 +1,12 @@
+[
+  {
+    "id": "science-0001",
+    "category": "Science",
+    "difficulty": "easy",
+    "question": "What planet is known as the Red Planet?",
+    "answer": "Mars",
+    "acceptableAnswers": ["Mars", "The planet Mars"],
+    "explanation": "Mars is called the Red Planet because iron oxide on its surface gives it a reddish color.",
+    "tags": ["space", "planets"]
+  }
+]

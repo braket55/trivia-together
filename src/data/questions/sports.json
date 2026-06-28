@@ -1,0 +1,12 @@
+[
+  {
+    "id": "sports-0001",
+    "category": "Sports",
+    "difficulty": "easy",
+    "question": "In baseball, how many strikes make an out?",
+    "answer": "Three",
+    "acceptableAnswers": ["Three", "3"],
+    "explanation": "A batter is out after three strikes.",
+    "tags": ["baseball"]
+  }
+]

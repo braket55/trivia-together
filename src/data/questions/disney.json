@@ -1,0 +1,12 @@
+[
+  {
+    "id": "disney-0001",
+    "category": "Disney",
+    "difficulty": "easy",
+    "question": "What Disney movie features the song Let It Go?",
+    "answer": "Frozen",
+    "acceptableAnswers": ["Frozen"],
+    "explanation": "Let It Go is performed by Elsa in Frozen.",
+    "tags": ["movies", "songs"]
+  }
+]

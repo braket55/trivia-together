@@ -1,0 +1,12 @@
+[
+  {
+    "id": "books-0001",
+    "category": "Books",
+    "difficulty": "easy",
+    "question": "Who wrote The Hobbit?",
+    "answer": "J. R. R. Tolkien",
+    "acceptableAnswers": ["J. R. R. Tolkien", "Tolkien"],
+    "explanation": "The Hobbit was written by J. R. R. Tolkien and published in 1937.",
+    "tags": ["fantasy"]
+  }
+]

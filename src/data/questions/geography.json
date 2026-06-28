@@ -1,0 +1,12 @@
+[
+  {
+    "id": "geography-0001",
+    "category": "Geography",
+    "difficulty": "easy",
+    "question": "What is the capital city of France?",
+    "answer": "Paris",
+    "acceptableAnswers": ["Paris"],
+    "explanation": "Paris is the capital and largest city of France.",
+    "tags": ["capitals", "europe"]
+  }
+]
